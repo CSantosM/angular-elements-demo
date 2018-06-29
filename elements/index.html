@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>custom button</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!-- WebComponent -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- WebComponent -->
+
+</head>
+
+<body>
+    <div id="main" style="text-align: center;">
+        <h1>Insert your name</h1>
+        <form onsubmit="sendName(); return false" style="padding: 80px; margin: auto">
+            <p>
+                <label>User:</label>
+                <input type="text" id="user" value="User1" required>
+            </p>
+            <p>
+                <input type="submit" value="JOIN">
+            </p>
+        </form>
+    </div>
+
+    <custom-button name=""></custom-button>
+
+    <!-- WebComponent JS -->
+    <script type='application/javascript' src='custom-button.js'></script>
+    <!-- WebComponent JS -->
+
+    <script>
+
+        function sendName() {
+
+            var user = document.getElementById('user').value;
+            var ov = document.querySelector('custom-button');
+            ov.userName = user;
+        }
+
+    </script>
+
+</body>
+
+</html>
