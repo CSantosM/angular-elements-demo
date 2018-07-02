@@ -4,13 +4,13 @@ import { Input, Component } from '@angular/core';
   selector: 'custom-root',
   template: `
           <div  *ngIf="display">
-            <h3>Hello {{_userName}}</h3>
+            <h3>Hello {{_userName}}, Testing WITH ngIf</h3>
             <div class="button-row">
               <button mat-icon-button color="primary" (click)="toggleBlue()">
                 <mat-icon aria-label="Example icon-button with a heart icon" matTooltip="Like">favorite</mat-icon>
               </button>
+              <mat-icon *ngIf="blue">alarm</mat-icon>
             </div>
-            <mat-icon *ngIf="blue">alarm</mat-icon>
           </div>
           `,
   styles: [
